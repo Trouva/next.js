@@ -120,7 +120,6 @@ export async function renderError (error) {
   const errorMessage = `${error.message}\n${error.stack}`
   console.error(errorMessage)
 
-  console.log('passing to subscriber')
   if (window && window.nextErrorSubscription) {
     window.nextErrorSubscription(error)
   }
